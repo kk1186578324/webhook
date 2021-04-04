@@ -1,5 +1,5 @@
 let http = require('http');
-let server = http.createServer(function (req,res) {
+let webhook = http.createServer(function (req, res) {
     console.log(req.method,req.url)
     if(req.method=='post'&&req.url=='/webhook'){
         res.setHeader('Content-Type','application/json');
@@ -8,6 +8,6 @@ let server = http.createServer(function (req,res) {
         res.end('Not Found')
     }
 })
-server.listen(4000,()=>{
+webhook.listen(4000,()=>{
     console.log('webhook服务已经在4000端口上启动')
 })
