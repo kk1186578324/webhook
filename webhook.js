@@ -3,7 +3,7 @@ let crypto = require('crypto')
 let {spawn} = require('child_process')
 let SECRET = '123456';
 function sign(body){
-    return `sha1=`+crypto.creatHmac('sha1',SECRET).update(body).digest('hex')
+    return `sha1=`+crypto.createHmac('sha1',SECRET).update(body).digest('hex')
 }
 let webhook = http.createServer(function (req, res) {
     console.log(req.method,req.url)
