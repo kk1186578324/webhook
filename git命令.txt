@@ -1,1 +1,11 @@
-git reset --hard "commitid"
+git log 查看日志
+
+git reset --hard "commitid" 从版本库到 工作区已控制区
+
+reset 过后之前记录没有了，需要再次回到reset前的功能就用git reflog 命令
+
+版本库--》暂存区  用git reset --soft "版本号"
+
+暂存区--》工作区  用git reset HEAD 
+
+git checkout 从工作红区到未修改状态
